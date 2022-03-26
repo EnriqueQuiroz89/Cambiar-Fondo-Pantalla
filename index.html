@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Fondo de la Pagina</title>
+
+
+        <style>
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 50px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .selectColor {
+                height: 50px;
+                width: 80px;
+            }
+
+
+
+        </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Puedes cambiar el fondo de la pagina</h2>
+        <input type="color" id="inputColor" class="selectColor">
+    </div>
+
+
+    <script type="text/javascript">
+        const color =document.querySelector("#inputColor");
+
+        color.addEventListener("change", (e)=> {
+            document.body.style.backgroundColor = e.target.value;
+        })
+
+    </script>
+
+</body>
+
+</html>
